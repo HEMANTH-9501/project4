@@ -1,0 +1,177 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+.layout-header {
+  background: #2c3e50;
+  color: white;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.layout-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  height: 60px;
+}
+
+.brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0;
+  color: #bdc3c7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.layout-nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #3498db;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #ecf0f1;
+  padding: 6px 12px;
+  background: #34495e;
+  border-radius: 4px;
+}
+
+.layout-main {
+  flex: 1;
+  overflow-y: auto;
+  background: #f5f5f5;
+  padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .layout-header-content {
+    padding: 16px 20px;
+    height: 56px;
+  }
+  
+  .brand-title {
+    font-size: 20px;
+  }
+  
+  .brand-subtitle {
+    font-size: 10px;
+  }
+  
+  .layout-nav {
+    gap: 24px;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-header-content {
+    padding: 12px 16px;
+    height: 52px;
+  }
+  
+  .brand-title {
+    font-size: 18px;
+  }
+  
+  .brand-subtitle {
+    font-size: 9px;
+  }
+  
+  .layout-nav {
+    gap: 16px;
+  }
+  
+  .nav-link {
+    font-size: 13px;
+  }
+  
+  .user-name {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* Simple hover effects */
+.nav-link {
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+/* Simple focus states */
+.nav-link:focus {
+  outline: 1px solid #3498db;
+  outline-offset: 2px;
+}
+
+.user-name:focus {
+  outline: 1px solid #3498db;
+  outline-offset: 2px;
+}

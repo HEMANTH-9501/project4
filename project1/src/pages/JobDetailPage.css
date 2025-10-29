@@ -1,0 +1,19 @@
+.job-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.job-info {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-top: 16px;
+}
+
+.job-info p {
+  margin-bottom: 12px;
+}
+
+.job-info strong {
+  color: #333;
+}

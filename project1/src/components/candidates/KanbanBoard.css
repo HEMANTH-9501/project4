@@ -1,0 +1,120 @@
+.kanban-board {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  min-height: calc(100vh - 180px);
+  overflow-x: auto;
+}
+
+.kanban-column {
+  flex: 0 0 320px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid var(--column-color);
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.column-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.candidate-count {
+  background: #e9ecef;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  color: #495057;
+}
+
+.column-description {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.candidates-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.candidate-card {
+  background: white;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.candidate-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.candidate-name {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.candidate-email {
+  font-size: 0.875rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.candidate-meta {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+/* Drag and drop styles */
+.candidate-card.dragging {
+  opacity: 0.5;
+  transform: scale(1.02);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  cursor: grabbing;
+}
+
+.kanban-column.column-over {
+  background: #f1f3f5;
+}
+
+.candidate-card.drag-over {
+  transform: translateY(2px);
+}
+
+.drop-indicator {
+  position: relative;
+}
+
+.drop-indicator::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--column-color);
+}
+
+.drop-indicator-top::before {
+  top: -4px;
+}
+
+.drop-indicator-bottom::before {
+  bottom: -4px;
+}

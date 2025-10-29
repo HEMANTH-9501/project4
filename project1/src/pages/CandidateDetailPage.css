@@ -1,0 +1,50 @@
+.candidate-detail {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.candidate-detail h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.candidate-info {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.candidate-info p {
+  margin-bottom: 12px;
+}
+
+.timeline {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.timeline h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.timeline-event {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.timeline-date {
+  color: #999;
+  font-size: 12px;
+}
+
+.timeline-stage {
+  font-weight: 600;
+  text-transform: capitalize;
+}
