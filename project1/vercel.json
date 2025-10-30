@@ -1,13 +1,7 @@
 {
-  "redirects": [
-    { "source": "/jobs", "destination": "/#/jobs", "permanent": false },
-    { "source": "/jobs/:id", "destination": "/#/jobs/:id", "permanent": false },
-    { "source": "/candidates", "destination": "/#/candidates", "permanent": false },
-    { "source": "/candidates/:id", "destination": "/#/candidates/:id", "permanent": false },
-    { "source": "/assessments", "destination": "/#/assessments", "permanent": false },
-    { "source": "/assessments/:jobId", "destination": "/#/assessments/:jobId", "permanent": false }
-  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
 }
+
+
